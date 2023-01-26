@@ -29,7 +29,8 @@ Optimizador básico de modelo Wilson , Nrtl  y Uniquac, para sistemas termodiná
 `Propanol_Agua = Sistema.sistema(t, x, y, CoefA, CoefB, V1, V2, P, q = q, qprima = q_prima, r = r, Nombre= 'Propanol_Agua')`
 
 // Resolvemos el sistema  usando la funcion resolver("Limites inferiores","Limites superiores", "cantidad de parametros", "población","iteraciones", size= cantidad de datos que se quieran calcular, modelo= 1, 2,3,4 o Nulo)  
-`Propanol_Agua.resolver([-1000.0, -1000.0], [2500.0, 2500.0], 2, 30, 150, size = 50, modelo= 3)`
+`Propanol_Agua.resolver([-1000.0, -1000.0], [2500.0, 2500.0], 2, 30, 150, size = 50, modelo= 3)`  
+El programa devolvera un gráfico T- x,y  del sistema resuelto con los datos calculados por el programa y los datos experimentales. 
 
 modelos
 - 1 : Modelo de Wilson
