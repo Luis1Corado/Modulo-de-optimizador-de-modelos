@@ -1,19 +1,19 @@
 # Modulo-de-optimizador-de-modelos
 
+```python
 pip install OptimizadorModelos
-
-Optimizador básico de modelo Wilson , Nrtl  y Uniquac, para sistemas termodinámicos no convexos. 
+```
+Optimizador básico de modelo Wilson , Nrtl  y UNIQUAC, para sistemas termodinámicos no convexos. 
 
 **Ejemplo de como utilizar el paquete:**
 
-// Importamos el modulo sistema del paquete   
-hola  
+// Importamos el modulo **Sistema** 
 ```python
 from OptimizadorModelos import Sistema 
 import numpy as np 
 ```
 
-// Declaramos las variables que necesitara el programa
+// Declaramos las variables que se utilizaran para crear el sistema. Temperatura, fracciones molares en fase de vapor y liquido , Coeficientes de Antoine, Volumenes molares , presión y si se tiene  q , q prima y r para el modelo UNIQUAC.
 
 ```python
 t = np.array([100, 98.59, 95.09, 91.05, 88.96, 88.26, 87.96, 87.79, 87.66, 87.83, 89.34, 92.3, 97.18])
@@ -45,9 +45,15 @@ modelos
 - 2 : Modelo UNIQUAC
 - 4 o nulo : Calcula los parametros para los tres modelos.
 
-Si se quieren los ver los datos tabulados
+Si se quieren los ver los parametros y errores del optimizador tabulados 
 `Propanol_Agua.resultados`  
-Devolvera un Dataframe con los datos del modelo con el que se trabajo 
+Devolvera un Dataframe con los datos del modelo con el que se trabajo.
+
+Si se quieren ver los datos termodinamicos calculados por el progrma se pueden ver con  
+`Propanol_Agua.data_WILSON`  
+`Propanol_Agua.data_NRTL`  
+`Propanol_Agua.data_UNIQUAC`  
+
 
 ## UNIDADES CON LA QUE TRABAJA EL PROGRAMA
 
