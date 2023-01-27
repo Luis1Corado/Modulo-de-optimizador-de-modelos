@@ -3,7 +3,7 @@
 ```python
 pip install OptimizadorModelos
 ```
-Optimizador básico de modelo Wilson , Nrtl  y UNIQUAC, para sistemas termodinámicos no convexos. 
+Optimizador básico de modelo Wilson , NRTL  y UNIQUAC, para sistemas termodinámicos no convexos. 
 
 **Ejemplo de como utilizar el paquete:**
 
@@ -13,7 +13,8 @@ from OptimizadorModelos import Sistema
 import numpy as np 
 ```
 
-// Declaramos las variables que se utilizaran para crear el sistema. Temperatura, fracciones molares en fase de vapor y liquido , Coeficientes de Antoine, Volumenes molares , presión y si se tiene  q , q prima y r para el modelo UNIQUAC.
+// Declaramos las variables que se utilizaran para crear el sistema.   
+Temperatura, fracciones molares en fase de vapor y liquido , Coeficientes de Antoine, Volumenes molares , presión y si se tiene  q , q prima y r para el modelo UNIQUAC.
 
 ```python
 t = np.array([100, 98.59, 95.09, 91.05, 88.96, 88.26, 87.96, 87.79, 87.66, 87.83, 89.34, 92.3, 97.18])
@@ -30,7 +31,8 @@ q_prima = np.array([0.89, 1])
 
 ``` 
 
-//Creamos el sistema, si no se cuenta con los datos de UNIQUAC se puede crear el sistema de igual forma omitiendo los kwargs** q , qprima y r  
+//Creamos el sistema.  
+Si no se cuenta con los datos de UNIQUAC se puede crear el sistema de igual forma omitiendo los kwargs** q , qprima y r    
 ```python
 Propanol_Agua = Sistema.sistema(t, x, y, CoefA, CoefB, V1, V2, P, q = q, qprima = q_prima, r = r, Nombre= 'Propanol_Agua')
 ```
